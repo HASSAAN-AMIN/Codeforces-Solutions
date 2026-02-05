@@ -1,6 +1,6 @@
 # Codeforces Solutions 
 
-This repository contains my accepted solutions for Codeforces problems
+This repo contains my accepted solutions for Codeforces problems
 
 I upload my solutions here to:
 
@@ -30,7 +30,6 @@ Example:
 
 ##  Notes
 
-- Solutions are written for learning and practice.
 - My solutions may not be the best/shortest, but they work correctly.
 
 ---
@@ -42,6 +41,6 @@ Competitive Programmer
 
 ---
 
-## 🌱 Goal
+##  Goal
 
-To stay consistent, solve more problems daily, and reach higher Codeforces ratings.
+My goal is to stay consistent, solve more problems daily, and reach higher Codeforces ratings.
