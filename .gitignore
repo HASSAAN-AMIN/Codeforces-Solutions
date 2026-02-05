@@ -3,6 +3,10 @@
 *.out
 *.app
 
+# Ignore binaries named like problem codes (no extension)
+[0-9]*
+
+
 # Ignore object files
 *.o
 *.obj
