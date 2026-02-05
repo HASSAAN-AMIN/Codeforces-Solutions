@@ -3,6 +3,14 @@
 *.out
 *.app
 
+# tis gonna help in removing files without extension
+*
+!/**/
+!*.*
+!README
+!LICENSE
+
+
 
 
 # Ignore object files
