@@ -1,6 +1,6 @@
 # Codeforces Solutions 
 
-This repo contains my accepted solutions for Codeforces problems
+This repo contains my accepted(most of them) solutions for Codeforces problems
 
 I upload my solutions here to:
 
