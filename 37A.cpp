@@ -35,8 +35,6 @@ int main() {
             cnt++;
             j++;
         }
-        // if(cnt > 1)
-        //     cout << "Count is : " << cnt  << '\n' ; 
         i= j -1;
         x = max(x  , cnt);
         y -= cnt - 1 ;
