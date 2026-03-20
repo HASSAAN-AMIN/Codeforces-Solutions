@@ -18,34 +18,22 @@ int main() {
     while(t--){
         int n , k;
         cin >> n >> k ;
-        vector<int> cnt ;
-        int x ;
-        int crnt = 0 ;
+        vector<int> arr(n) ;
+
+        int cnt = 0 ; 
+        int ans = 0 ;
         for (int i = 0; i < n; i++) {
-            cin >> x ;
-            if(x == 0)
-                crnt++;
-            else{
-                if(crnt != 0){
-                    cnt.push_back(crnt +1 );
-                    crnt = 0;
-                }
+            cin >> arr[i] ;
+            if( arr[i] == 1 ){
+                ans += (cnt + 1 )/( k + 1) ;
+                cnt = 0 ;
+                continue;
             }
+            cnt++;
         }
-        if(crnt != 0)
-            cnt.push_back(crnt);
-        
-        // for (int i = 0; i < cnt.size(); i++) {
-        //     cout << cnt[i] << ' ';
-        // }
-        // cout << '\n' ;
+        ans+=(cnt + 1)/(k + 1);
 
-        int ans = 0;
-        for(int i = 0 ; i < cnt.size() ; i++){
-            ans += (cnt[i]/(k+1)) ; 
-        } 
         cout << ans << '\n' ;
-
     }
 
     return 0;
