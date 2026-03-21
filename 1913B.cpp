@@ -15,19 +15,23 @@ int main() {
     while(t--){
         string s;
         cin >> s;
-        int ones = 0;
-        int zeroes = 0;
-        for(char c : s){
-            if(c == '1')
-                ones++;
+        int arr[2] = { 0,0} ;
+        for (int i = 0; i < s.size(); i++) {
+            if(s[i] == '0')
+                arr[0]++;
+            else
+                arr[1]++;
         }
-        zeroes = s.length()-ones;
-        if(ones  == zeroes)
-            cout << 0 << '\n';
-        else if
-        // 111100
-        //  00
-        // 
+
+
+        for (int i = 0; i < s.size() +1; i++) {
+            if((arr[ 1 - (s[i] -'0')] == 0 ) || (i ==s.size() )){
+                cout << s.size() - i << '\n' ;
+                break;
+            }
+            arr[1 - (s[i] -'0')]-= 1;
+        }
+
     
     }
 
