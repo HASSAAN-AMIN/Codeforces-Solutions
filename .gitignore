@@ -2,6 +2,8 @@
 *.exe
 *.out
 *.app
+*.cph/
+*tempCodeRunnerFile.cpp
 
 # tis gonna help in removing files without extension
 *
