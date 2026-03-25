@@ -1,0 +1,43 @@
+/* 
+                بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ   
+    In the name of Allah, the Most Gracious, the Most Merciful.
+*/
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int t;
+    cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        vector<long long> arr(n);
+        
+        long long sum = 0;
+        long long maxy = 0;
+        int cnt = 0;
+
+        
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
+            
+            sum += arr[i];
+            maxy = max(maxy, arr[i]);
+
+            if (sum - maxy == maxy) {
+                cnt++;
+            }
+            
+        }
+        
+        cout << cnt << '\n';
+    }
+
+    return 0;
+}
