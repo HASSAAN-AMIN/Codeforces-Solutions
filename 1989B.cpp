@@ -60,12 +60,10 @@ int main() {
 
         int cnt = 0;
 
-        // Try starting the subsequence of b from every possible character b[i]
         for (int i = 0; i < b.size(); i++) {
             int k = i;
             int umm = 0;
             
-            // See how many characters of b we can find in a starting from b[i]
             for (int j = 0; j < a.size(); j++) {
                 if (k < b.size() && a[j] == b[k]) {
                     umm++;
@@ -75,8 +73,7 @@ int main() {
             cnt = max(cnt, umm);
         }
 
-        // Total length = length of a + remaining characters of b
-        cout << a.size() + (b.size() - cnt) << '\n';
+        cout << a.size() + b.size() - cnt << '\n';
 
     }
 
