@@ -36,7 +36,7 @@ int main() {
         int idx = -1 ;
         for (int i = 1; i < n; i++) {
             if(arr[i] >  0 ){
-                long long curr = pre[i] + suf[i+1] -arr[i] ;
+                long long curr = pre[i-1] + suf[i+1] -arr[i] ;
                 if(curr > ans)  {
                     ans = curr;
                     idx = i ;
