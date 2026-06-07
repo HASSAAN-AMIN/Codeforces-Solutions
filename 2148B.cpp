@@ -15,7 +15,6 @@ int main() {
     while(t--){
         int n , m , x, y;
         cin >> n >> m >> x >> y;
-        
         for (int i = 0; i <n+m; i++) {
             cin >> x ;
         }
