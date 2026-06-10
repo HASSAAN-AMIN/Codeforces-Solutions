@@ -25,7 +25,7 @@ int main() {
 
 
         int ans  = 0 ;
-        int cnt =  0 ;
+        long long cnt =  0 ;
         int sus =  0 ; 
 
         for ( char c : arr ){
