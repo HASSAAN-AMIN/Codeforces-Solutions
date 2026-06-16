@@ -5,6 +5,8 @@
 #include <iostream>
 #include<vector>
 #include<algorithm>
+#include <map>
+
 
 using namespace std;
 
@@ -18,37 +20,47 @@ int main() {
         int n;
         cin >> n;
         vector<int> arr(n) ;
-        int big = 0 ;
         for (int i = 0; i < n; i++) {
             cin >> arr[i] ;
-            if(arr[i] > big)    
-                big = arr[i] ;
         }
 
-        int ans  = big*n; 
-
-      sort(arr.rbegin() , arr.rend()) ;
-
-        int crnt = 0 ;
-
-        //      [ 1  , 0 ]
-
-        //      [ 0  , 1 ]
+        sort(arr.begin() , arr.end()) ;
+        swap( arr[0] , arr[n-1] ) ;
+        sort(arr.begin() +1 , arr.end()) ;
         
-        // crnt =>  0  1 
-        // ans  =>  2   
+        vector<int> good ; 
+        vector<int> eww ;
         
-        cout << "crnt : " << crnt  << '\n' ;
-        cout << " ans : " << ans   << '\n' ;
+        for (int i = 1; i < n; i++) {
+            if (!good.empty() && good.back() == arr[i]) {
+                eww.push_back(arr[i]); 
+            } else {
+                good.push_back(arr[i]); 
+            }
+        }
+        int crnt = 1 ; 
+        for (int i = 0; i < good.size(); i++) {
+            arr[crnt] = good[i];
+            crnt++;
+        }
+        for (int i = 0; i < eww.size(); i++) {
+            arr[crnt] = eww[i];
+            crnt++;
+        }
+        long long ans = 0 ;
         
+        map < int , int> mapy;
+
+        int x  = 0 ;
         for (int i = 0; i < n; i++) {
-            if(arr[i] == crnt)
-                crnt+=1 ;
-            ans += crnt ;
+            mapy[arr[i]]++;
+            while(mapy[x])
+                x++;
+            ans += arr[0] + x ;
         }
 
         cout << ans << '\n' ;
-
+        
 
 
 
