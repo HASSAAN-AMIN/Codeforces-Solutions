@@ -14,20 +14,24 @@ int main() {
 
     int n  ;
     cin >> n ;
-    vector<pair<int , int >  > arr(n +1); 
-    arr.push_back({0,0} );
+    // vector<pair<int , int >  > arr(n); 
+    
+    // for (int i = 0; i < n; i++) {
+    //     cin >> arr[i].first >> arr[i].second ;
+    // }
+    int x  = 0  ;
+    int y = 0 ;
+    int pishu = 1  ; 
     for (int i = 0; i < n; i++) {
-        cin >> arr[i].first >> arr[i].second ;
-    }
+        int a , b ; 
+        cin >> a >> b ;
 
-    int pishu = 0  ; 
-    for (int i = 1; i <= n; i++) {
-        
-        
-        pishu +=  min( arr[i].first- arr[i-1].first  , arr[i].second - arr[i-1].second   ) ;
-        
-        cout << " a : " << arr[i].first- arr[i-1].first << " \n"; 
-        cout << " b : " << arr[i].second - arr[i-1].second << "  \n"; 
+        pishu += max( 0  , (min(a , b ) - max( x , y) ) +1 );  
+
+        if( x== y)
+            pishu--; 
+        x = a ;
+        y = b; 
     } 
     cout << pishu << '\n' ;
 
