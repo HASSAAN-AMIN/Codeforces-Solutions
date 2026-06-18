@@ -15,7 +15,7 @@ int main() {
     while(t--){
         int n , a , b ,k;
         cin >> n >> a >> b >> k; 
-        if( n < 3)
+        if( n <= 3)
             cout << 1 << '\n';
         else
             cout << min( abs(a-b) , n -abs(a-b) ) + k  << '\n'  ; 
