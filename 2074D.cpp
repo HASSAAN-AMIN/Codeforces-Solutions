@@ -41,7 +41,7 @@ int main() {
                 mapy[x] = max(mapy[x], cnt);
             }
         }
-        int ans = 0 ;
+        long long ans = 0 ;
         for( auto x : mapy){
             ans += x.second ;
         }
