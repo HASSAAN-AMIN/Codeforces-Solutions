@@ -31,6 +31,7 @@ int main() {
 
         // exponentiation
         long long ans = 1;
+        
         long long b = 2;
         while (x > 0) {
             if (x & 1) {
