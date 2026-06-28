@@ -23,16 +23,16 @@ int main() {
         vector<int> arr(n) ;
         for (int i = 0; i < n; i++) 
             cin >> arr[i] ;
-        map< int , pair<int, int> > mapy ; 
+        map< int , pair<int, int> > pishu ; 
         for (int i = 0; i < n; i++) {
             int x = arr[i] ; 
             set<int> vis ; 
             int ops = 0 ;
             while(!vis.count(x)){
                 vis.insert(x) ;
-                if( i == 0 || mapy.count(x)){
-                    mapy[x].first += ops ; 
-                    mapy[x].second += 1 ;
+                if( i == 0 || pishu.count(x)){
+                    pishu[x].first += ops ; 
+                    pishu[x].second += 1 ;
                 }
                 ops++;
                 if(x%2)
@@ -43,7 +43,7 @@ int main() {
         }
         int ans  = 2e9 ;
 
-        for( auto it : mapy)
+        for( auto it : pishu)
             if(it.second.second == n)
                 ans = min( ans  , it.second.first) ;
         cout << ans << '\n' ;
