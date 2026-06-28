@@ -22,7 +22,7 @@ int main() {
         long long ans = 0;
 
         for (int i = 1; i < n+1; i++) {
-            ans += (1ll*n/i)*(lll*n/i);
+            ans += (1ll*n/i)*(1ll*n/i);
         }
 
         cout << ans << '\n';     
