@@ -24,37 +24,42 @@ int main() {
         for (int i = 0; i < n; i++) {
             cin >> arr[i];
         }
+        vector<int> brr  = arr;
 
-        bool sus = true ;
+        sort( brr.begin() ,brr.end() ) ; 
 
 
-        int cnt =  0;
-        bool down = false;
+        if( arr == brr){
+            cout  << "yes" << '\n' ;
+            cout  << 1 << ' ' << 1 << '\n';
+        }else{
+            int l = 0  ; 
+            int r = n-1 ;
 
-        for (int i = 1; i < n; i++) {
-            if( down ){
-                if( arr[i] <= arr[i-1] )
-                    continue;
-                else{
-                    down = false;
+
+            for (int i = 0; i < n; i++) {
+                if( arr[i] != brr[i] ){
+                    l = i ;
+                    break ;
                 }
             }
-            if( arr[i] >= arr[i-1])
-                continue;
-            else{
-                cnt++; 
-                down = true;
-            }            
+            for (int i =  n- 1; i >=  0 ; i--) {
+                if( arr[i] != brr[i] ){
+                    r = i ;
+                    break ;
+                }
+            }
+
+            reverse( arr.begin() + l , arr.begin() + r +1  ) ;
+
+            if( arr == brr){
+                cout  << "yes" << '\n' ;
+                cout  << l+1 << ' ' << r+1 << '\n';
+            }else
+                cout << "no" << '\n' ;
+
+
         }
-        if( cnt > 1 || ( n > 1 && arr[0] <= arr[1] ))
-            sus = false;
-
-
-        if( sus )
-            cout << "YES\n" ;
-        else
-            cout << "NO" << '\n' ; 
-
 
 
     // }
