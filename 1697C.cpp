@@ -44,17 +44,11 @@ int main() {
             string a , b ;
 
 
-            vector<int> arr ;
-            vector<int> brr ;
             for (int i = 0; i < n; i++) {
                 if(s[i] != 'b')
                     a += s[i] ;
-                else    
-                    arr.push_back(i);
                 if(t[i] != 'b')
                     b += t[i] ;
-                else    
-                    brr.push_back(i);
             }
 
             if( a != b){
@@ -86,13 +80,7 @@ int main() {
                 if(sc[i] < tc[i])   
                     sus = true;
             }
-
-
-
-
         }
-
-
 
         if( sus )
             cout << "NO" << '\n' ; 
