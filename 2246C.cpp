@@ -13,7 +13,7 @@ long long exp(int x ){
 
     long long res = 1;
     
-    int base = 2;
+    long long base = 2;
     
     while (x > 0) {
         if (x & 1)  
