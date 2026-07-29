@@ -4,6 +4,7 @@
 *.app
 *.cph/
 *tempCodeRunnerFile.cpp
+*.txt
 
 # tis gonna help in removing files without extension
 *
