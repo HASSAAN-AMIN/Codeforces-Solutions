@@ -21,6 +21,7 @@ int main() {
     cin >> t;
     while(t--){
         int w , b;
+        
         cin  >>  w>> b ;
         int x = w+ b;   
         int l = 1 ;
