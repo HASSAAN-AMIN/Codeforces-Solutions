@@ -42,20 +42,28 @@ int main() {
             x ^= arr[i] ^ brr[i]; 
         }
 
-        int idx  = -1 ; 
+        int idx = -1;
 
         for (int i = 0; i < n; i++) {
-            if( arr[i] == x) 
-                idx = i ;
-            else
-                arr[i] ^= x ;
+            if (arr[i] == x) {
+                idx = i;
+                break;
+            }
         }
 
+        if (idx == -1) {
+            cout << "NO\n";
+            continue;
+        }
 
-        sort(arr.begin() , arr.end()) ;
+        for (int i = 0; i < n; i++) {
+            if (i == idx) continue;
+            arr[i] ^= x;
+        }
 
+        sort(arr.begin(), arr.end());
 
-        if( arr == brr && idx != -1)    
+        if (arr == brr)  
             cout << "YES" << '\n';
         else
             cout << "NO" << '\n' ;        

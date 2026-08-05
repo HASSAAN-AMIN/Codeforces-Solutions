@@ -19,9 +19,9 @@ int main() {
         int n;
         cin >> n;
 
-        vector<int> arr(n);
+        vector<long long> arr(n);
 
-        multiset<int> shi;
+        multiset<long long> shi;
         for (int i = 0; i < n; i++) {
             cin >> arr[i];
             shi.insert(arr[i]);
@@ -31,7 +31,7 @@ int main() {
 
         bool sus = true;
 
-        int cur = 0 ;
+        long long cur = 0 ;
         for (int i = 0; i < n; i++) {
             auto it = shi.lower_bound(1 - cur) ;
             if( it == shi.end()){
