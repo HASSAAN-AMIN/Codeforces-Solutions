@@ -5,6 +5,7 @@
 #include <iostream>
 #include<vector>
 #include<algorithm>
+#include <set>
 
 using namespace std;
 
@@ -20,9 +21,38 @@ int main() {
 
         vector<int> arr(n);
 
+        multiset<int> shi;
         for (int i = 0; i < n; i++) {
             cin >> arr[i];
+            shi.insert(arr[i]);
         }
+
+        vector<long long > brr(n) ;
+
+        bool sus = true;
+
+        int cur = 0 ;
+        for (int i = 0; i < n; i++) {
+            auto it = shi.lower_bound(1 - cur) ;
+            if( it == shi.end()){
+                sus = false;
+                break;
+            }
+            cur += *it ;
+            brr[i] = cur ; 
+            shi.erase(it) ;
+        }   
+        
+        if (!sus) {
+            cout << -1 << '\n';
+        }
+        else {
+            for (auto x : brr)
+                cout << x << " ";
+            cout << '\n';
+        }
+        
+        
 
         
     }
