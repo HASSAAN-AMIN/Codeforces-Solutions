@@ -1,6 +1,7 @@
-# Codeforces Solutions 
+# Competitive-Programming
 
-This repo contains my accepted(most of them) solutions for Codeforces problems
+
+This repo contains my accepted(most of them) solutions for Codeforces(mostly) and other  problems from  other platforms
 
 I upload my solutions here to:
 
@@ -8,7 +9,7 @@ I upload my solutions here to:
 - Improve problem solving skills  
 - Maintain a clean archive of solved problems  
 - Share code with others for learning  
-- (Tbh to know how github works 😭💀)
+- (Tbh to know how github works 😭💀)(ik lowkey but yk to get better)
 ---
 
 ##  Structure
@@ -31,6 +32,7 @@ Example:
 ##  Notes
 
 - My solutions may not be the best/shortest, but they work correctly.
+- I always try not to push the WA or TLE solutions but still if there is any i would have mentioned that
 
 ---
 
@@ -43,4 +45,5 @@ Competitive Programmer
 
 ##  Goal
 
-My goal is to stay consistent, solve more problems daily, and reach higher Codeforces ratings.
+My goal is to stay consistent, solve more problems daily, and get good.
+I LIKE TO SOLVE PROBLEMS
